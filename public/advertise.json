@@ -1,0 +1,99 @@
+[
+    {
+      "property": {
+        "image": "https://example.com/property1-image.jpg",
+        "title": "Cozy Urban Apartment",
+        "location": "456 Main Street, Cityville",
+        "agent": {
+          "name": "Alice Johnson",
+          "image": "https://example.com/agent1-image.jpg"
+        },
+        "verification_status": "Verified",
+        "price_range": "$300,000 - $350,000",
+        "details": {
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "area": "1,200 sq. ft.",
+          "features": [
+            "Balcony with city view",
+            "Modern design",
+            "Close to public transport"
+          ],
+          "description": "This cozy urban apartment offers a modern design and is conveniently located in the heart of Cityville. Enjoy the balcony with a stunning city view and the convenience of being close to public transport. Ideal for those who appreciate urban living."
+        }
+      }
+    },
+    {
+      "property": {
+        "image": "https://example.com/property2-image.jpg",
+        "title": "Spacious Suburban House",
+        "location": "789 Green Meadows, Suburbia",
+        "agent": {
+          "name": "Bob Smith",
+          "image": "https://example.com/agent2-image.jpg"
+        },
+        "verification_status": "Verified",
+        "price_range": "$500,000 - $600,000",
+        "details": {
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "area": "2,800 sq. ft.",
+          "features": [
+            "Large backyard",
+            "Modern kitchen",
+            "Quiet neighborhood"
+          ],
+          "description": "This spacious suburban house offers four bedrooms, a modern kitchen, and a large backyard. Located in a quiet neighborhood, it provides a peaceful retreat while still being close to amenities. Perfect for families looking for a comfortable home."
+        }
+      }
+    },
+    {
+      "property": {
+        "image": "https://example.com/property3-image.jpg",
+        "title": "Rustic Countryside Cottage",
+        "location": "101 Meadow Lane, Countryside",
+        "agent": {
+          "name": "Emma Davis",
+          "image": "https://example.com/agent3-image.jpg"
+        },
+        "verification_status": "Not Verified",
+        "price_range": "$250,000 - $300,000",
+        "details": {
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "area": "1,800 sq. ft.",
+          "features": [
+            "Fireplace",
+            "Wooden beams",
+            "Surrounded by nature"
+          ],
+          "description": "Experience the charm of this rustic countryside cottage with three bedrooms, a cozy fireplace, and wooden beams. Although not verified, this property offers a peaceful retreat surrounded by nature. Ideal for those seeking a quiet and rustic lifestyle."
+        }
+      }
+    },
+    {
+      "property": {
+        "image": "https://example.com/property4-image.jpg",
+        "title": "Modern Downtown Loft",
+        "location": "222 High Street, Metropolis",
+        "agent": {
+          "name": "Daniel White",
+          "image": "https://example.com/agent4-image.jpg"
+        },
+        "verification_status": "Verified",
+        "price_range": "$700,000 - $800,000",
+        "details": {
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "area": "1,000 sq. ft.",
+          "features": [
+            "Open concept",
+            "High ceilings",
+            "Close to entertainment"
+          ],
+          "description": "Live in style in this modern downtown loft with an open concept, high ceilings, and close proximity to entertainment. Verified and ready for urban enthusiasts, this property is perfect for those who appreciate contemporary city living."
+        }
+      }
+    }
+  ]
+  
