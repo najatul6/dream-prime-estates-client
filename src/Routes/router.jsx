@@ -7,11 +7,13 @@ import Contact from "../Pages/Contact/Contact";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import LogIn from "../Pages/Account/LogIn/LogIn";
 import Register from "../Pages/Account/Register/Register";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <ManiLayout/>,
+        errorElement:<ErrorPage/>,
         children:[
             {
                 path:'/',
