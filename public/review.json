@@ -1,38 +1,44 @@
 [
     {
       "reviewer_name": "Sarah Johnson",
-      "reviewer_image": "https://example.com/sarah-johnson-image.jpg",
+      "reviewer_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "review_description": "Exceptional service from DreamPrime Estates! They made my dream of owning a luxurious home a reality. The attention to detail and personalized approach set them apart. Kudos to the team for finding the perfect property for me!",
-      "property_title": "Elegant City Retreat"
+      "property_title": "Elegant City Retreat",
+      "rating": 4
     },
     {
       "reviewer_name": "Alex Rodriguez",
-      "reviewer_image": "https://example.com/alex-rodriguez-image.jpg",
+      "reviewer_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "review_description": "DreamPrime Estates exceeded my expectations! The professionalism and expertise of the team made the buying process seamless. I'm now the proud owner of a stunning penthouse in the heart of the city.",
-      "property_title": "Skyline Splendor Penthouse"
+      "property_title": "Skyline Splendor Penthouse",
+      "rating": 3
     },
     {
       "reviewer_name": "Emily Davis",
-      "reviewer_image": "https://example.com/emily-davis-image.jpg",
+      "reviewer_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "review_description": "DreamPrime Estates turned my dream into reality! The dedication and transparency throughout the entire process were impressive. I'm in love with my new countryside escape!",
-      "property_title": "Rustic Retreat Oasis"
+      "property_title": "Rustic Retreat Oasis",
+      "rating": 5
     },
     {
       "reviewer_name": "David Thompson",
-      "reviewer_image": "https://example.com/david-thompson-image.jpg",
+      "reviewer_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "review_description": "A big shoutout to DreamPrime Estates for their exceptional service. The team went above and beyond to find the perfect suburban home for my family. Highly recommend their expertise and professionalism!",
-      "property_title": "Tranquil Suburban Haven"
+      "property_title": "Tranquil Suburban Haven",
+      "rating": 2
     },
     {
       "reviewer_name": "Mia Chen",
-      "reviewer_image": "https://example.com/mia-chen-image.jpg",
+      "reviewer_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "review_description": "DreamPrime Estates made my dreams come true with their outstanding service. The process was smooth, and the team was always available for my queries. I'm now the happy owner of a chic downtown loft!",
-      "property_title": "Modern Downtown Elegance"
+      "property_title": "Modern Downtown Elegance",
+      "rating": 3
     },
     {
       "reviewer_name": "Jonathan Turner",
-      "reviewer_image": "https://example.com/jonathan-turner-image.jpg",
+      "reviewer_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "review_description": "DreamPrime Estates is the epitome of excellence in real estate. The professionalism, attention to detail, and commitment to finding the perfect property are unmatched. Grateful for their expertise!",
-      "property_title": "Majestic Hillside Mansion"
+      "property_title": "Majestic Hillside Mansion",
+      "rating": 5
     }
   ]
