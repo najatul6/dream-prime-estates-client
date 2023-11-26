@@ -7,11 +7,11 @@ import Testimonial from "./Testimonial/Testimonial";
 const Home = () => {
     return (
         <div className="max-w-[1440px] mx-auto">
-            <Banner/>
-            <Advertisement/>
-            <Testimonial/>
-            <BuyerGuide/>
-            <ContactSection/>
+            <Banner />
+            <Advertisement />
+            <Testimonial />
+            <BuyerGuide />
+            <ContactSection />
         </div>
     );
 };
