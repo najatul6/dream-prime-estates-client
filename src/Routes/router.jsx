@@ -8,6 +8,8 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import LogIn from "../Pages/Account/LogIn/LogIn";
 import Register from "../Pages/Account/Register/Register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
+import PropertiesDetails from "../Pages/AllProperties/PropertiesDetails/PropertiesDetails";
 
 const router = createBrowserRouter([
     {
@@ -24,8 +26,13 @@ const router = createBrowserRouter([
                 element:<AllProperties/>
             },
             {
+                path:'allProperties/:id',
+                element:<PrivateRoute><PropertiesDetails/></PrivateRoute>,
+                loader:({params})=>fetch(`http://localhost:5000/AllProperties/${params.id}`)
+            },
+            {
                 path:'dashboard',
-                element:<Dashboard/>
+                element:<PrivateRoute><Dashboard/></PrivateRoute>
             },
             {
                 path:'about',

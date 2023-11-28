@@ -8,7 +8,7 @@ const Advertisement = () => {
     const [advertisement, setAdvertisement] = useState();
     console.log(advertisement)
     useEffect(() => {
-        fetch('/advertise.json')
+        fetch('http://localhost:5000/Advertisement')
             .then(res => res.json())
             .then(data => setAdvertisement(data))
     }, [])
@@ -33,8 +33,8 @@ const Advertisement = () => {
                     className="mySwiper"
                 >
                     {
-                        advertisement?.map(item => <SwiperSlide key={item.id}>
-                            <img className="w-full h-[300px]" src={item.property.image} alt="" />
+                        advertisement?.map(item => <SwiperSlide key={item._id}>
+                            <img className="w-full h-[300px]" src={item.image} alt="" />
                         </SwiperSlide>)
                     }
 

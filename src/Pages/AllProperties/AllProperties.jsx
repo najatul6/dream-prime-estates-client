@@ -1,13 +1,8 @@
-import { useEffect, useState } from "react";
+import useAllProperties from "../../Hooks/useProperties";
 import PropertiesCard from "./PropertiesCard/PropertiesCard";
 
 const AllProperties = () => {
-    const [allProperties, setAllProperties] = useState([]);
-    useEffect(() => {
-        fetch('/allpropartise.json')
-            .then(res => res.json())
-            .then(data => setAllProperties(data))
-    }, [])
+    const[allProperties] = useAllProperties();
     return (
         <div className="max-w-[1440px] mx-auto">
             <div className="shadow-2xl shadow-[#4c40f767] rounded-xl">

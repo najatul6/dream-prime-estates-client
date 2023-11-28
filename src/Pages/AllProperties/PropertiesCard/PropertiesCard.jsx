@@ -1,9 +1,11 @@
 import { MdVerified } from "react-icons/md";
 import { VscUnverified } from "react-icons/vsc";
 import { FaMagnifyingGlassArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const PropertiesCard = ({ proparties }) => {
-    const { property_image, property_title, property_location, agent_name, agent_image, verification_status, price_range, agent_position } = proparties
+    const { _id, property_image, property_title, property_location, agent_name, agent_image, verification_status, price_range, agent_position } = proparties;
+
     return (
         <div className="card card-compact bg-[#00113B] text-white shadow-2xl shadow-[#4c40f767]">
             <figure><img src={property_image} alt={property_title} /></figure>
@@ -31,9 +33,9 @@ const PropertiesCard = ({ proparties }) => {
                             <p className="text-sm">{agent_position}</p>
                         </div>
                     </div>
-                    <div>
-                        <button className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white">Details <FaMagnifyingGlassArrowRight/></button>
-                    </div>
+                    <Link to={`/allProperties/${_id}`}>
+                        <button className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white">Details <FaMagnifyingGlassArrowRight /></button>
+                    </Link>
                 </div>
             </div>
         </div>
