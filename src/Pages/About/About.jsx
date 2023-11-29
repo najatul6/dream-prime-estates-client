@@ -37,8 +37,8 @@ const About = () => {
     return (
 
         <div className="max-w-[1440px] mx-auto">
-            <div className="my-20">
-                <div className="shadow-2xl shadow-[#4C40F7] rounded-xl my-14">
+            <div className="py-20">
+                <div className="shadow-2xl shadow-[#4C40F7] rounded-xl my-10">
                     <div className="grid grid-cols-4 bg-[#00113B] rounded-xl shadow-[#FFF] shadow-inner text-white">
                         <div>
                             {worldClock('Asia/Dhaka', 'Bangladesh')}

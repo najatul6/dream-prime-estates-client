@@ -5,7 +5,7 @@ import Navbar from "../Common/Navbar/Navbar";
 const ManiLayout = () => {
     return (
         <div className="bg-[#00113B] mx-auto">
-            <Navbar />
+            <Navbar/>
             <Outlet></Outlet>
             <Footer />
         </div>

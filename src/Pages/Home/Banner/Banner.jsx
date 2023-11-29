@@ -32,46 +32,46 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img1} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img1} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img2} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img2} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img3} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img3} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img4} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img4} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img5} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img5} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img6} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img6} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img7} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img7} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img8} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img8} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img9} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img9} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img10} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img10} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img11} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img11} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img12} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img12} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img13} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img13} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-[180px] rounded-lg md:h-[400px] lg:h-[600px]' src={img14} alt="" />
+                    <img className='w-full h-[100vh] md:h-[400px] lg:h-[600px]' src={img14} alt="" />
                 </SwiperSlide>
             </Swiper>
         </div>

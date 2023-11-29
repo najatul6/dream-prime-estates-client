@@ -30,8 +30,6 @@ const Register = () => {
                 'content-type': 'multipart/form-data'
             }
         });
-        // const photo = res.data.data.display_url;
-        // console.log(photo)
         if (res.data.success) {
             const userinfo = {
                 name: data.name,
@@ -40,7 +38,7 @@ const Register = () => {
             }
             userCreate(data.email, data.password)
                 .then(result => {
-                    updateUserProfile(data.name, res.data.data.display_url)
+                    updateUserProfile(userinfo.name, userinfo.profileImage)
                         .then(() => {
                             Swal.fire({
                                 position: "top-start",
@@ -55,6 +53,15 @@ const Register = () => {
                         .catch(error => console.log(error))
                     console.log(result.user)
                 })
+        }
+        else{
+            Swal.fire({
+                position: "top",
+                icon: "warning",
+                title: "Please Try again",
+                showConfirmButton: false,
+                timer: 1500
+              });
         }
 
     }

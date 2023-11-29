@@ -73,8 +73,7 @@ const Navbar = () => {
         logOut()
     ]
     return (
-        <div className='max-w-[1440px] mx-auto'>
-            <div className="navbar z-50">
+            <div className="navbar fixed z-10 bg-[#00113B] bg-opacity-50 text-white max-w-[1920px]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -129,7 +128,6 @@ const Navbar = () => {
                     }
                 </div>
             </div>
-        </div>
     );
 };
 

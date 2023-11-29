@@ -5,7 +5,7 @@ const AllProperties = () => {
     const[allProperties] = useAllProperties();
     return (
         <div className="max-w-[1440px] mx-auto">
-            <div className="shadow-2xl shadow-[#4c40f767] rounded-xl">
+            <div className="shadow-2xl shadow-[#4c40f767] rounded-xl pt-48">
                 <div className="flex items-center p-6 space-x-6  rounded-xl shadow-inner shadow-[#FC0] ">
                     <div className="flex bg-gray-100 p-4 w-full space-x-4 rounded-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -25,9 +25,9 @@ const AllProperties = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-3 gap-10 my-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20">
                 {
-                    allProperties?.map(proparties => <PropertiesCard key={proparties?.property_title} proparties={proparties}></PropertiesCard>)
+                    allProperties?.map(proparties => <PropertiesCard key={proparties?._id} proparties={proparties}></PropertiesCard>)
                 }
             </div>
         </div>

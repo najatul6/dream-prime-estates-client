@@ -2,7 +2,7 @@ import contactBG from '../../assets/contact/contactUs.svg'
 
 const Contact = () => {
     return (
-        <div className="max-w-[1440px] mx-auto my-20">
+        <div className="max-w-[1440px] mx-auto py-20">
             <div>
                 <img className='w-full' src={contactBG} alt="" />
             </div>

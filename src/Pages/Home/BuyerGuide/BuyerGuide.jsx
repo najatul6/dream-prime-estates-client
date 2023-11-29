@@ -7,7 +7,7 @@ const BuyerGuide = () => {
                 heading="BUYER'S GUIDE"
                 subHeading="STEPS TO SUCCESS FOR BUYING YOUR HOME"
             />
-            <div className="text-white grid grid-cols-3 gap-8">
+            <div className="text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="shadow-inner shadow-slate-400 p-5 space-y-4">
                     <h4 className="text-xl font-bold">STEP - 1</h4>
                     <h2 className="text-3xl font-bold">Let&#39;s Connect</h2>
