@@ -6,7 +6,6 @@ import SectionHeader from "../../../Components/SectionHeader/SectionHeader";
 
 const Advertisement = () => {
     const [advertisement, setAdvertisement] = useState();
-    console.log(advertisement)
     useEffect(() => {
         fetch('http://localhost:5000/Advertisement')
             .then(res => res.json())

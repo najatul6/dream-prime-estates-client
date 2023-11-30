@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useSecureServer from "../../../Hooks/useSecureServer";
+import useWishlist from "../../../Hooks/useWishlist";
 
 
 const PropertiesDetails = () => {
@@ -11,8 +12,8 @@ const PropertiesDetails = () => {
     const { property_image, property_title, property_location, description, agent_name, agent_image, verification_status, property_verification_status, price_range, agent_position } = properties;
     const { user } = useAuth();
     const secureServer = useSecureServer();
-
-    const handleaddwishlist = item => {
+    const[,refetch]= useWishlist()
+    const handleaddwishlist = () => {
         if (user && user.email) {
             const wishlistInfo = {
                 property_image,
@@ -36,6 +37,7 @@ const PropertiesDetails = () => {
                             showConfirmButton: false,
                             timer: 1000
                         });
+                        refetch()
                     }
                 })
         } else {
@@ -91,7 +93,7 @@ const PropertiesDetails = () => {
                             <p className="text-sm">{agent_position}</p>
                         </div>
                     </div>
-                    <button onClick={() => handleaddwishlist(properties)} className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white">
+                    <button onClick={ handleaddwishlist} className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white">
                         Add to Wishlist
                     </button>
                 </div>
