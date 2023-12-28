@@ -7,8 +7,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$400,000 - $450,000",
-      "description": "Experience city living at its finest! This modern loft in the heart of Metropolis offers a sleek design and convenient access to downtown amenities. Verified and ready for a new owner seeking urban elegance."
+      "price_range": "400,000 - 450,000",
+      "description": "Experience city living at its finest! This modern loft in the heart of Metropolis offers a sleek design and convenient access to downtown amenities. Verified and ready for a new owner seeking urban elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -18,7 +38,7 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Not Verified",
-      "price_range": "$750,000 - $800,000",
+      "price_range": "750,000 - 800,000",
       "description": "Escape to this stunning coastal villa with panoramic ocean views. While not yet verified, this property offers tranquility and luxury. Ideal for those seeking a serene retreat by the sea."
     },
     {
@@ -29,8 +49,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$550,000 - $600,000",
-      "description": "A perfect family home in a quiet suburban neighborhood. Verified by our team, this property offers spacious living areas and a backyard for family gatherings and relaxation."
+      "price_range": "550,000 - 600,000",
+      "description": "A perfect family home in a quiet suburban neighborhood. Verified by our team, this property offers spacious living areas and a backyard for family gatherings and relaxation.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -40,8 +80,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -51,8 +111,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -62,8 +142,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -73,8 +173,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -84,8 +204,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -95,8 +235,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -106,8 +266,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -117,8 +297,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -128,8 +328,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$300,000 - $350,000",
-      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance."
+      "price_range": "300,000 - 350,000",
+      "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -139,8 +359,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$1,200,000 - $1,500,000",
-      "description": "Indulge in luxury with this lakeside mansion. Verified for its opulence, this property offers breathtaking views and high-end amenities for the discerning homeowner."
+      "price_range": "1,200,00 - $1,500,000",
+      "description": "Indulge in luxury with this lakeside mansion. Verified for its opulence, this property offers breathtaking views and high-end amenities for the discerning homeowner.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -150,7 +390,7 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Not Verified",
-      "price_range": "$600,000 - $700,000",
+      "price_range": "600,000 - 700,000",
       "description": "Escape to the mountains with this charming chalet. While not yet verified, this property promises a cozy retreat with stunning views and easy access to mountain activities."
     },
     {
@@ -161,8 +401,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$350,000 - $400,000",
-      "description": "Enjoy the beauty of nature with this townhouse featuring a private garden. Verified and ready for a new owner, this property offers a serene oasis in the heart of the city."
+      "price_range": "350,000 - 400,000",
+      "description": "Enjoy the beauty of nature with this townhouse featuring a private garden. Verified and ready for a new owner, this property offers a serene oasis in the heart of the city.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -172,8 +432,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$900,000 - $1,000,000",
-      "description": "Own a piece of history with this charming brownstone in the historic district. Verified and meticulously maintained, this property offers classic elegance and modern comforts."
+      "price_range": "900,000  $1,000,000",
+      "description": "Own a piece of history with this charming brownstone in the historic district. Verified and meticulously maintained, this property offers classic elegance and modern comforts.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -183,8 +463,28 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Verified",
-      "price_range": "$1,500,000 - $2,000,000",
-      "description": "Live in luxury with this downtown penthouse boasting panoramic city views. Verified for its opulence, this property offers the epitome of urban living."
+      "price_range": "1,500,00 - $2,000,000",
+      "description": "Live in luxury with this downtown penthouse boasting panoramic city views. Verified for its opulence, this property offers the epitome of urban living.",
+      "reviews": [
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Alice Johnson",
+      "useremail": "alice@example.com",
+      "comment": "Amazing properties and excellent service!"
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Bob Williams",
+      "useremail": "bob@example.com",
+      "comment": "Great location and top-notch amenities."
+    },
+    {
+      "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+      "username": "Charlie Davis",
+      "useremail": "charlie@example.com",
+      "comment": "Smooth process from inquiry to purchase."
+    }
+  ]
     },
     {
       "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
@@ -194,7 +494,7 @@
       "agent_position": "Realtor",
       "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
       "verification_status": "Not Verified",
-      "price_range": "$800,000 - $900,000",
+      "price_range": "800,000 - 900,000",
       "description": "Embrace sustainable living with this eco-friendly smart home. While not yet verified, this property showcases modern technology and environmental consciousness for a forward-thinking homeowner."
     }
   ]

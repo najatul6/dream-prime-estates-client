@@ -1,7 +1,8 @@
 import { createContext, useEffect, useState } from "react";
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import {  GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from "../Config/Firebase/firebase.config";
 import PropTypes from 'prop-types';
+import UsePublicServer from "../Hooks/usePublicSever";
 
 export const AuthContext = createContext(null);
 
@@ -11,7 +12,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
-    const githubProvider = new GithubAuthProvider();
+    const publicServer = UsePublicServer();
 
     const userCreate = (email, password) => {
         setLoading(true);
@@ -34,11 +35,6 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, googleProvider);
     }
 
-    const githubLogIn = () => {
-        setLoading(true);
-        return signInWithPopup(auth, githubProvider);
-    }
-
     const logOut = () => {
         setLoading(true);
         return signOut(auth);
@@ -47,6 +43,19 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
+            if(currentUser){
+                // Get Token and store in server 
+                const userInfo = {email: currentUser.email};
+                publicServer.post('/jwt', userInfo)
+                .then(res=>{
+                    if(res.data.token){
+                        localStorage.setItem('user-token',res.data.token);
+                    }
+                })
+            }
+            else{
+                localStorage.removeItem('user-token');
+            }
             setLoading(false)
         });
         return () => {
@@ -58,12 +67,12 @@ const AuthProvider = ({ children }) => {
         loading,
         user,
         userCreate,
+        updateUserProfile,
         googleLogIn,
-        githubLogIn,
         logIn,
         logOut,
-        updateUserProfile
     }
+    
     return (
         <AuthContext.Provider value={userInfo}>
             {children}

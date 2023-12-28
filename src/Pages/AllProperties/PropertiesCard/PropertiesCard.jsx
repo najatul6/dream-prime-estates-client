@@ -2,6 +2,7 @@ import { MdVerified } from "react-icons/md";
 import { VscUnverified } from "react-icons/vsc";
 import { FaMagnifyingGlassArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const PropertiesCard = ({ proparties }) => {
     const { _id, property_image, property_title, property_location, agent_name, agent_image, verification_status, price_range, agent_position } = proparties;
@@ -41,5 +42,9 @@ const PropertiesCard = ({ proparties }) => {
         </div>
     );
 };
+
+PropertiesCard.propTypes = {
+    proparties: PropTypes.any,
+}
 
 export default PropertiesCard;

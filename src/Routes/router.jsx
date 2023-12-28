@@ -21,6 +21,9 @@ import RequestedProperties from "../Pages/Dashboard/Agent Dashboard/Requested pr
 import ManageProperties from "../Pages/Dashboard/Admin Dashboard/Manage Properties/ManageProperties";
 import ManageReviews from "../Pages/Dashboard/Admin Dashboard/Manage reviews/ManageReviews";
 import ManageUser from "../Pages/Dashboard/Admin Dashboard/Manage Users/ManageUser";
+import WishList from "../Pages/Dashboard/User Dashboard/WishList/WishList";
+import OfferPage from "../Pages/Dashboard/User Dashboard/WishList/Offer Page/OfferPage";
+import AddProperties from "../Pages/Dashboard/Agent Dashboard/Add Properties/AddProperties";
 
 const router = createBrowserRouter([
     {
@@ -77,11 +80,25 @@ const router = createBrowserRouter([
                 path:'propertyBought',
                 element:<PropertyBought/>
             },
+            {
+                path:'offerPage/:id',
+                element:<OfferPage/>,
+                loader:({params})=>fetch(`http://localhost:5000/AllWishlist/${params.id}`)
+            },
+            {
+                path:'wishlist',
+                element: <PrivateRoute><WishList/></PrivateRoute>
+            },
 
             // Agent Section 
             {
                 path:'agentProfile',
                 element:<AgentProfile/>
+            },
+            {
+            
+                path:'addproperties',
+                element:<AddProperties/>
             },
             {
                 path:'addedProperties',
@@ -92,7 +109,7 @@ const router = createBrowserRouter([
                 element:<MysoldProperties/>
             },
             {
-                path:'requestproperties',
+                path:'requestProperties',
                 element:<RequestedProperties/>
             },
 
