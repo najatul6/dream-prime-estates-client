@@ -16,14 +16,18 @@ import { MdDomainAdd } from "react-icons/md";
 import { FaShop } from "react-icons/fa6";
 import { TbShoppingBagCheck } from "react-icons/tb";
 import { RiGitPullRequestFill } from "react-icons/ri";
+import useUserRole from "../../Hooks/useUserRole";
 
 const Dashboard = () => {
     const [wishlist] = useWishlist();
 
     // TODO: GET AGENT VELUE FROM DATABASE
-    const isAdmin = false;
-    const isAgent = false;
-
+    const {isAdmin,isAgent,isLoading} = useUserRole();
+    if(isLoading){
+        return <p>Loading.....</p>
+    }
+    // console.log( isAgent)
+    // let isAgent = false;
     // Agent Dashboard Links 
     const adminLinks = <>
         <li>
