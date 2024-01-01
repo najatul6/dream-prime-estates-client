@@ -1,18 +1,18 @@
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// import useAuth from "./useAuth";
+import { useNavigate } from "react-router-dom";
+import useAuth from "./useAuth";
 
 const secureServer = axios.create({
     baseURL:'http://localhost:5000'
 })
 
 const useSecureServer = () => {
-    // const navigate = useNavigate();
-    // const {logOut} = useAuth();
+    const navigate = useNavigate();
+    const {logOut} = useAuth()
 
     secureServer.interceptors.request.use(function(config){
         const token = localStorage.getItem('user-token')
-        config.headers.Authorization = `Bearer ${token}`;
+        config.headers.authorization = `Bearer ${token}`;
         return config;
     }, function(error){
         return Promise.reject(error)
@@ -22,11 +22,11 @@ const useSecureServer = () => {
         return response;
     }, async(error)=>{
         const status = error.response.status;
-        // if(status=== 401 || status === 403){
-        //     await logOut();
-        //     navigate('/logIn')
-        // }
         console.log(status)
+        if(status === 401|| status===403){
+            await logOut();
+            navigate('/logIn');
+        }
         return Promise.reject(error)
     })
 

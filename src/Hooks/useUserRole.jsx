@@ -12,7 +12,6 @@ const useUserRole = () => {
     queryKey: [user?.email, "isAdmin"],
     queryFn: async () => {
       const res = await secureServer.get(`/AllUsers/${user.email}`);
-      console.log(res.data.role);
       const role = res.data.role;
       if(role === "Admin"){
         setIsAdmin(true)
@@ -23,7 +22,6 @@ const useUserRole = () => {
         setIsAdmin(false);
         setIsAgent(false);
       }
-      // return res.data.role;
     },
   });
   return {isAgent, isAdmin,isLoading};
