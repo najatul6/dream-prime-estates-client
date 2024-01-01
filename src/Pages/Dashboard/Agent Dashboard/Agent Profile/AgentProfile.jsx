@@ -1,18 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../../Hooks/useAuth";
-import useSecureServer from "../../../../Hooks/useSecureServer";
+import UseUserProfile from "../../../../Hooks/UseUserProfile";
 
 const AgentProfile = () => {
     const { user } = useAuth();
-  const secureServer = useSecureServer();
-
-  const { data: userprofile = [] } = useQuery({
-    queryKey: [user?.email],
-    queryFn: async () => {
-      const res = await secureServer.get(`/AllUsers/${user.email}`);
-      return res.data;
-    },
-  });
+    const [userprofile] = UseUserProfile();
     return (
         <div className="max-w-[1440px] mx-auto text-white">
             <div className="">

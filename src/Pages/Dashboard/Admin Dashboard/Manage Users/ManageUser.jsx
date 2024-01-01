@@ -1,17 +1,11 @@
 import Swal from "sweetalert2";
 import useSecureServer from "../../../../Hooks/useSecureServer";
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
+import useAllUser from "../../../../Hooks/useAllUser";
 
 const ManageUser = () => {
   const secureServer = useSecureServer();
-
-  const { data: users = [], refetch } = useQuery({
-    queryKey: ["users"],
-    queryFn: async () => {
-      const res = await secureServer.get("/AllUsers");
-      return res.data;
-    },
-  });
+  const [AllUsers,refetch] = useAllUser();
 
   //   Make User
   const handleMakeUser = (user) => {
@@ -126,7 +120,7 @@ const ManageUser = () => {
   return (
     <div>
       <h2 className="text-center my-10 text-2xl font-bold text-white">
-        Total Users : {users?.length}
+        Total Users : {AllUsers?.length}
       </h2>
       <div className="overflow-x-auto">
         <table className="table text-white">
@@ -143,7 +137,7 @@ const ManageUser = () => {
             </tr>
           </thead>
           <tbody>
-            {users?.map((user, index) => (
+            {AllUsers?.map((user, index) => (
               <tr key={user._id}>
                 <th>
                   <label>{index + 1}</label>
@@ -164,7 +158,7 @@ const ManageUser = () => {
                   <button
                     onClick={() => handleMakeAgent(user)}
                     className={`btn btn-outline btn-xs`}
-                    disabled = {user.role === "Agent"}
+                    disabled={user.role === "Agent"}
                   >
                     Make Agent
                   </button>
@@ -172,7 +166,7 @@ const ManageUser = () => {
                   <button
                     onClick={() => handleMakeAdmin(user)}
                     className="btn btn-outline btn-xs"
-                    disabled={user.role==="Admin"}
+                    disabled={user.role === "Admin"}
                   >
                     Make Admin
                   </button>
@@ -181,7 +175,7 @@ const ManageUser = () => {
                   <button
                     onClick={() => handleMakeUser(user)}
                     className="btn btn-outline btn-xs"
-                   disabled={user.role==="user"}
+                    disabled={user.role === "user"}
                   >
                     Make User
                   </button>

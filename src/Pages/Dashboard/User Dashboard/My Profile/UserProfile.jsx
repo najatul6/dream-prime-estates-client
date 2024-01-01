@@ -1,20 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../../Hooks/useAuth";
 import useWishlist from "../../../../Hooks/useWishlist";
-import useSecureServer from "../../../../Hooks/useSecureServer";
+import UseUserProfile from "../../../../Hooks/UseUserProfile";
 
 const UserProfile = () => {
   const { user } = useAuth();
   const [wishlist] = useWishlist();
-  const secureServer = useSecureServer();
-
-  const { data: userprofile = [] } = useQuery({
-    queryKey: [user?.email],
-    queryFn: async () => {
-      const res = await secureServer.get(`/AllUsers/${user.email}`);
-      return res.data;
-    },
-  });
+  const [userprofile] = UseUserProfile();
 
   return (
     <div className="max-w-[1440px] mx-auto text-white">
@@ -27,15 +18,15 @@ const UserProfile = () => {
           </div>
           <div className="space-y-5">
             <h2 className="text-xl">
-              <span className="text-[#FC0] font-bold">Name : </span>{" "}
+              <span className="text-[#FC0] font-bold">Name : </span> {" "}
               {userprofile?.name}
             </h2>
             <h2 className="text-xl">
-              <span className="text-[#FC0] font-bold">Email : </span>{" "}
+              <span className="text-[#FC0] font-bold">Email : </span> {" "}
               {userprofile?.email}
             </h2>
             <h2 className="text-xl uppercase">
-              <span className="text-[#FC0] font-bold capitalize">Role : </span>{" "}
+              <span className="text-[#FC0] font-bold capitalize">Role : </span> {" "}
               {userprofile?.role}
             </h2>
           </div>

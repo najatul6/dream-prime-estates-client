@@ -6,10 +6,13 @@ import { MdLogout } from "react-icons/md";
 import useWishlist from "../../Hooks/useWishlist";
 import { MdAddHomeWork } from "react-icons/md";
 import useUserRole from "../../Hooks/useUserRole";
+import UseUserProfile from "../../Hooks/UseUserProfile";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const { isAdmin, isAgent } = useUserRole();
+  const [userprofile] = UseUserProfile();
+  console.log(userprofile);
   const [wishlist] = useWishlist();
   const navlinks = (
     <>
@@ -108,7 +111,8 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex items-center gap-3">
-            <Link to="/dashboard/wishlist">
+            {userprofile?.role === user ? (
+              <Link to="/dashboard/wishlist">
               <button className="btn bg-transparent hover:bg-transparent border-0 rounded-full relative">
                 <MdAddHomeWork className="text-3xl text-white" />
                 <div className="absolute right-0 bottom-0  text-[#FC0] p-1 rounded-full">
@@ -116,6 +120,9 @@ const Navbar = () => {
                 </div>
               </button>
             </Link>
+            ) : (
+              ""
+            )}
             <div className="dropdown dropdown-end z-[50]">
               <label
                 tabIndex={0}

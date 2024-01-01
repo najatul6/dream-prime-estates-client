@@ -11,7 +11,7 @@ const useAllProperties = (search) => {
             return res.data;
         }
     })
-    return [allproperties,refetch]
+    return [allproperties, refetch]
     
 };
 

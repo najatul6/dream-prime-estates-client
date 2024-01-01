@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const WishList = () => {
     const [wishlist, refetch] = useWishlist();
-    const secureSever = useSecureServer();
+    const secureServer = useSecureServer();
     const handleDeleteWishlist = id => {
         Swal.fire({
             title: "Are you sure?",
@@ -17,7 +17,7 @@ const WishList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                secureSever.delete(`/AllWishlist/${id}`)
+                secureServer.delete(`/AllWishlist/${id}`)
                     .then(res => {
                         refetch();
                         if (res.data.acknowledged === true) {
@@ -38,13 +38,13 @@ const WishList = () => {
             <div className="overflow-x-auto">
                 <table className="table text-white">
                     {/* head */}
-                    <thead className="text-white">
+                    <thead className="text-white capitalize">
                         <tr>
                             <th>Position</th>
                             <th>Property image</th>
                             <th>Property title & location</th>
                             <th>Agent Info</th>
-                            <th>verification status</th>
+                            <th>State Status</th>
                             <th>Price range</th>
                             <th>Action</th>
                             <th>Action</th>

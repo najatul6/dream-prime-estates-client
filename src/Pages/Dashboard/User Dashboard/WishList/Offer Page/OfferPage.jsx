@@ -1,8 +1,8 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import useAuth from "../../../../../Hooks/useAuth";
 import useSecureServer from "../../../../../Hooks/useSecureServer";
-import useBoughtItem from "../../../../../Hooks/useBoughtItem";
 import Swal from "sweetalert2";
+import useWishlist from "../../../../../Hooks/useWishlist";
 const OfferPage = () => {
   const offerItem = useLoaderData();
   const {
@@ -13,10 +13,11 @@ const OfferPage = () => {
     user_email,
     user_name,
     price_range,
+    _id,
   } = offerItem;
   const { user } = useAuth();
   const secureServer = useSecureServer();
-  const [, refetch] = useBoughtItem();
+  const [, refetch] = useWishlist();
   const navigate = useNavigate();
   const handleMakeOffer = (e) => {
     e.preventDefault();
@@ -40,8 +41,12 @@ const OfferPage = () => {
             showConfirmButton: false,
             timer: 1000,
           });
-          refetch();
-          navigate("/dashboard/propertyBought")
+          secureServer.delete(`/AllWishlist/${_id}`).then((res) => {
+            if (res.data.acknowledged === true) {
+              refetch();
+              navigate("/dashboard/propertyBought")
+            }
+          });
         }
       });
     } else {
