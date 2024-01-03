@@ -12,7 +12,6 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const { isAdmin, isAgent } = useUserRole();
   const [userprofile] = UseUserProfile();
-  console.log(userprofile);
   const [wishlist] = useWishlist();
   const navlinks = (
     <>

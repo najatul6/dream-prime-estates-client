@@ -1,80 +1,55 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import useAuth from "../../../../Hooks/useAuth";
+import UsePublicServer from "../../../../Hooks/usePublicSever";
 
 const MyReviews = () => {
-    return (
-        <div>
-            <h2 className="text-center my-10 text-2xl font-bold text-white">Total Wishlist : {wishlist?.length}</h2>
-            <div className="overflow-x-auto">
-                <table className="table text-white">
-                    {/* head */}
-                    <thead className="text-white">
-                        <tr>
-                            <th>Position</th>
-                            <th>Property image</th>
-                            <th>Property title & location</th>
-                            <th>Agent Info</th>
-                            <th>verification status</th>
-                            <th>Price range</th>
-                            <th>Action</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            reviews?.map((property, index) => <tr key={property._id}>
-                                <th>
-                                    <label>
-                                        {index + 1}
-                                    </label>
-                                </th>
-                                <td>
-                                    <div className="flex items-center gap-3">
-                                        <div className="avatar">
-                                            <div className="mask  w-12 h-12">
-                                                <img src={property.property_image} alt="" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    {property.property_title}
-                                    <br />
-                                    <span className="badge badge-ghost badge-sm">{property.property_location}</span>
-                                </td>
-                                <td>
-                                    <div className="flex items-center gap-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-circle w-12 h-12">
-                                                <img src={property.agent_image} alt="" />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="font-bold">{property.agent_name}</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    Approved
-                                </td>
-                                <td>
-                                    {property.price_range}
-                                </td>
-                                <th>
-                                    <Link to={`/dashboard/offerPage/${property._id}`}>
-                                        <button className="btn btn-outline btn-xs">Make an Offer</button>
-                                    </Link>
-                                </th>
-                                <th>
-                                    <button onClick={() => handleDeleteWishlist(property._id)} className="btn btn-outline btn-xs">Delete</button>
-                                </th>
-                            </tr>)
-                        }
-                    </tbody>
+  const publicServer = UsePublicServer();
+  const { user } = useAuth();
+  const [allReviews, setAllReviews] = useState();
+  useEffect(() => {
+    publicServer.get(`/AllREviews?email=${user?.email}`).then((res) => {
+      setAllReviews(res.data);
+    });
+  }, [publicServer, user?.email]);
 
-                </table>
+  console.log(allReviews);
+  return (
+    <div className="px-3 pb-5">
+      <h2 className="text-center py-5 text-2xl font-bold text-white">
+        Total Reviews : {allReviews?.length}
+      </h2>
+      <hr className="py-5" />
+      {allReviews?.length > 0 ? (
+        <div className="flex flex-col gap-6">
+          {allReviews?.map((review, index) => (
+            <div
+              key={review?._id}
+              className="card bg-transparent shadow-xl rounded-xl py-2"
+            >
+              <div className="card-body shadow-inner shadow-white rounded-xl">
+                <h2 className="text-xl font-bold text-white text-center">
+                  {index + 1}
+                </h2>
+                <p className="text-center underline font-bold uppercase text-dark-yellow">
+                  {review?.property_title}
+                </p>
+                <p className="text-justify text-white">
+                  {review?.review_description}
+                </p>
+                {/* <div className="card-actions justify-center">
+            <button className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white">Delete</button>
+          </div> */}
+              </div>
             </div>
+          ))}
         </div>
-    );
+      ) : (
+        <div className="flex justify-center items-center min-h-screen">
+          <p className="text-3xl font-bold text-center text-white">No Reviews</p>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default MyReviews;

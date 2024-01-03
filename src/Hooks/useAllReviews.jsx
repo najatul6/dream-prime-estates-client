@@ -1,17 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
-import useSecureServer from "./useSecureServer";
+import UsePublicServer from "./usePublicSever";
 
 const useAllReviews = () => {
-    const secureServer = useSecureServer();
+    const publicServer = UsePublicServer()
 
-    const { data: AllReviews = [], refetch } = useQuery({
+    const { data: allReviews = [], refetch } = useQuery({
       queryKey: ["users"],
       queryFn: async () => {
-        const res = await secureServer.get("/AllUsers");
+        const res = await publicServer.get("/AllREviews");
         return res.data;
       },
     });
-    return [AllReviews,refetch]
+    return [allReviews,refetch]
 };
 
 export default useAllReviews;

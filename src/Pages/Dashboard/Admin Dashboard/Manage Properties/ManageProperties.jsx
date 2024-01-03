@@ -1,6 +1,6 @@
-import useAllProperties from "../../../../Hooks/useProperties";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { ImCross } from "react-icons/im";
+import useAllProperties from "../../../../Hooks/useAllProperties";
 
 const ManageProperties = () => {
     const [allProperties] = useAllProperties();

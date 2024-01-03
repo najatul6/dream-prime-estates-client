@@ -1,8 +1,8 @@
 import useAuth from "../../../../Hooks/useAuth";
 import useAllUser from "../../../../Hooks/useAllUser";
-import useAllProperties from "../../../../Hooks/useProperties";
 import useAllReviews from "../../../../Hooks/useAllReviews";
 import UseUserProfile from "../../../../Hooks/UseUserProfile";
+import useAllProperties from "../../../../Hooks/useAllProperties";
 
 const AdminProfile = () => {
   const { user } = useAuth();

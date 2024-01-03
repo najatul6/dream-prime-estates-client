@@ -1,7 +1,7 @@
 import { useState } from "react";
-import useAllProperties from "../../Hooks/useProperties";
 import PropertiesCard from "./PropertiesCard/PropertiesCard";
 import { FaSadCry } from "react-icons/fa";
+import useAllProperties from "../../Hooks/useAllProperties";
 
 const AllProperties = () => {
   const [search, setSearch] = useState("");

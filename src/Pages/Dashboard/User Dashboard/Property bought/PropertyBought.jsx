@@ -3,7 +3,7 @@ import useBoughtItem from "../../../../Hooks/useBoughtItem";
 // import useSecureServer from "../../../../Hooks/useSecureServer";
 
 const PropertyBought = () => {
-  const [boughtItem, refetch] = useBoughtItem();
+  const [boughtItem] = useBoughtItem();
   // const secureSever = useSecureServer();
   return (
     <div>

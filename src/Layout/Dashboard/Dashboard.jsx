@@ -25,7 +25,7 @@ const Dashboard = () => {
   const { isAdmin, isAgent, isLoading } = useUserRole();
   if (isLoading) {
     return (
-      <div>
+      <div className="min-h-screen">
         <img src={loading} className="w-full mx-auto" alt="Loading gif" />
       </div>
     );
@@ -228,7 +228,7 @@ const Dashboard = () => {
       </li>
       <li>
         <NavLink
-          to="/dashboard/myReviews"
+          to="/dashboard/Reviews"
           className="text-xl font-semibold"
           style={({ isActive }) => {
             return {

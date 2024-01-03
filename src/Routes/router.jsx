@@ -73,7 +73,7 @@ const router = createBrowserRouter([
                 element:<UserProfile/>
             },
             {
-                path:'myReviews',
+                path:'Reviews',
                 element:<MyReviews/>
             },
             {

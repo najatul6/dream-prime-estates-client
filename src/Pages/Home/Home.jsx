@@ -1,4 +1,4 @@
-import useAuth from "../../Hooks/useAuth";
+
 import Advertisement from "./Advertisement/Advertisement";
 import AllPropertisesHome from "./AllPropertisesHome/AllPropertisesHome";
 import Banner from "./Banner/Banner";
@@ -7,8 +7,6 @@ import ContactSection from "./ContactSection/ContactSection";
 import Testimonial from "./Testimonial/Testimonial";
 
 const Home = () => {
-  const { user } = useAuth();
-  console.log(user?.email)
   return (
     <div className="">
       <Banner />

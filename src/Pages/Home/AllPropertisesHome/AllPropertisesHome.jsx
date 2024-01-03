@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
-import useAllProperties from "../../../Hooks/useProperties";
 import PropertiesCard from "../../AllProperties/PropertiesCard/PropertiesCard";
 import SectionHeader from "../../../Components/SectionHeader/SectionHeader";
+import useAllProperties from "../../../Hooks/useAllProperties";
 
 const AllPropertisesHome = () => {
-    const [allProperties] = useAllProperties();
+    const [allproperties] = useAllProperties('');
+    console.log(allproperties)
     return (
         <div>
             <SectionHeader heading="Property" subHeading="Some property is show here Please explore more and see our all property"/>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20">
                 {
-                    allProperties?.slice(0, 6).map(proparties => <PropertiesCard key={proparties?._id} proparties={proparties}></PropertiesCard>)
+                    allproperties?.slice(0, 6).map(proparties => <PropertiesCard key={proparties?._id} proparties={proparties}></PropertiesCard>)
                 }
             </div>
                 <Link to="/allProperties" className="flex justify-center items-center">

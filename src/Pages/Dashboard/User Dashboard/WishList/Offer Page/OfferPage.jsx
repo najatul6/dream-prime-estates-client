@@ -9,12 +9,14 @@ const OfferPage = () => {
     property_title,
     property_location,
     agent_name,
+    agent_email,
     property_image,
     user_email,
     user_name,
     price_range,
     _id,
   } = offerItem;
+  console.log(offerItem)
   const { user } = useAuth();
   const secureServer = useSecureServer();
   const [, refetch] = useWishlist();
@@ -23,15 +25,19 @@ const OfferPage = () => {
     e.preventDefault();
     const offer_price = e.target.price_offer.value;
 
-    if (user && user.email) {
+    if (user && user?.email) {
       const propertyInfo = {
         property_title,
         property_image,
         property_location,
         agent_name,
+        agent_email,
         offer_price,
+        user_email,
+        user_name,
         status: "pending",
       };
+
       secureServer.post("/BoughtProperty", propertyInfo).then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
