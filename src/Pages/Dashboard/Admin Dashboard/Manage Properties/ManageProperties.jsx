@@ -3,7 +3,8 @@ import { ImCross } from "react-icons/im";
 import useAllProperties from "../../../../Hooks/useAllProperties";
 
 const ManageProperties = () => {
-    const [allProperties] = useAllProperties();
+    const [allProperties] = useAllProperties('');
+    console.log(allProperties)
     return (
         <div>
             <h2 className="text-center my-10 text-2xl font-bold text-white">Total Properties : {allProperties?.length}</h2>
@@ -57,16 +58,16 @@ const ManageProperties = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    Approved
+                                    {property.property_status}
                                 </td>
                                 <td>
                                     {property.price_range}
                                 </td>
                                 <th>
-                                    <button className="btn btn-outline btn-md"><IoCheckmarkSharp className="text-xl font-bold"/></button>
+                                    <button className="btn btn-outline btn-md hover:bg-green-600 border-white" disabled={property?.property_status==="Approved"}><IoCheckmarkSharp className="text-xl font-bold text-white"/></button>
                                 </th>
                                 <th>
-                                    <button className="btn btn-outline btn-md"><ImCross/></button>
+                                    <button className="btn btn-outline btn-md hover:bg-red-600 text-white" disabled={property?.property_status==="Rejected"}><ImCross className="text-white"/></button>
                                 </th>
                             </tr>)
                         }

@@ -11,8 +11,6 @@ const MyReviews = () => {
       setAllReviews(res.data);
     });
   }, [publicServer, user?.email]);
-
-  console.log(allReviews);
   return (
     <div className="px-3 pb-5">
       <h2 className="text-center py-5 text-2xl font-bold text-white">
