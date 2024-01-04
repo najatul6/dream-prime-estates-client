@@ -2,7 +2,6 @@ import useAllReviews from "../../../../Hooks/useAllReviews";
 
 const ManageReviews = () => {
   const [allReviews] = useAllReviews();
-  console.log(allReviews);
   return (
     <div className="px-3 pb-5">
       <h2 className="text-center py-5 text-2xl font-bold text-white">

@@ -16,11 +16,11 @@ const useUserRole = () => {
       if(role === "Admin"){
         setIsAdmin(true)
       }
-      else if(role === "agent"){
+      else if(role === "Agent"){
         setIsAgent(true)
       }else{
-        setIsAdmin(false);
         setIsAgent(false);
+        setIsAdmin(false);
       }
     },
   });

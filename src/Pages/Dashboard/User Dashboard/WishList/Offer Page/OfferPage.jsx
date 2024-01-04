@@ -16,7 +16,6 @@ const OfferPage = () => {
     price_range,
     _id,
   } = offerItem;
-  console.log(offerItem)
   const { user } = useAuth();
   const secureServer = useSecureServer();
   const [, refetch] = useWishlist();

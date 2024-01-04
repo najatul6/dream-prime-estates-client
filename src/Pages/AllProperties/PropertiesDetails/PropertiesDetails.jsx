@@ -20,6 +20,7 @@ const PropertiesDetails = () => {
     property_verification_status,
     price_range,
     agent_position,
+    property_status
   } = properties;
   const { user } = useAuth();
   const secureServer = useSecureServer();
@@ -90,9 +91,9 @@ const PropertiesDetails = () => {
           <p className="text-2xl">
             <span className="text-xl font-bold text-[#FC0]">
               {" "}
-              Verification-Status :
+              Status :
             </span>{" "}
-            Approved
+            {property_status}
           </p>
         </div>
       </div>
@@ -121,6 +122,7 @@ const PropertiesDetails = () => {
           </div>
           <button
             onClick={handleaddwishlist}
+            disabled={property_status==="Rejected"}
             className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white"
           >
             Add to Wishlist

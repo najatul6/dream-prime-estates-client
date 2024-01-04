@@ -5,7 +5,6 @@ import useAllProperties from "../../../Hooks/useAllProperties";
 
 const AllPropertisesHome = () => {
     const [allproperties] = useAllProperties('');
-    console.log(allproperties)
     return (
         <div>
             <SectionHeader heading="Property" subHeading="Some property is show here Please explore more and see our all property"/>

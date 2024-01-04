@@ -1,10 +1,92 @@
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { ImCross } from "react-icons/im";
+import { MdDeleteForever } from "react-icons/md";
 import useAllProperties from "../../../../Hooks/useAllProperties";
+import useSecureServer from "../../../../Hooks/useSecureServer";
+import Swal from "sweetalert2";
 
 const ManageProperties = () => {
-    const [allProperties] = useAllProperties('');
-    console.log(allProperties)
+    const secureServer = useSecureServer();
+    const [allProperties,refetch] = useAllProperties('');
+
+    const handleApprove = (id) => {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "Do you want to Approve?",
+          icon: "question",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            secureServer
+              .patch(`/AllProperties/${id}`, { property_status: "Approved" })
+              .then((res) => {
+                refetch();
+                if (res.data.acknowledged === true) {
+                  Swal.fire({
+                    title: "Congrats!",
+                    text: "Great Property Approved",
+                    icon: "success",
+                  });
+                }
+              });
+          }
+        });
+      };
+    const handleReject = (id) => {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "Do you want to Reject?",
+          icon: "question",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            secureServer
+              .patch(`/AllProperties/${id}`, { property_status: "Rejected" })
+              .then((res) => {
+                refetch();
+                if (res.data.acknowledged === true) {
+                  Swal.fire({
+                    title: "Congrats!",
+                    text: "Great Property Reject Successfully",
+                    icon: "success",
+                  });
+                }
+              });
+          }
+        });
+      };
+
+//   Delete Property
+    const handleDeleteProperty = (id) => {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            secureServer.delete(`/AllProperties/${id}`).then((res) => {
+              refetch();
+              if (res.data.acknowledged === true) {
+                Swal.fire({
+                  title: "Deleted!",
+                  text: "Property has been deleted form your PropertyList.",
+                  icon: "success",
+                });
+              }
+            });
+          }
+        });
+      };
     return (
         <div>
             <h2 className="text-center my-10 text-2xl font-bold text-white">Total Properties : {allProperties?.length}</h2>
@@ -21,6 +103,7 @@ const ManageProperties = () => {
                             <th>Price range</th>
                             <th>Approve</th>
                             <th>Reject</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,10 +147,13 @@ const ManageProperties = () => {
                                     {property.price_range}
                                 </td>
                                 <th>
-                                    <button className="btn btn-outline btn-md hover:bg-green-600 border-white" disabled={property?.property_status==="Approved"}><IoCheckmarkSharp className="text-xl font-bold text-white"/></button>
+                                    <button onClick={() => handleApprove(property?._id)} className={`btn btn-outline btn-md hover:bg-green-600 border-white ${property?.property_status === "Approved"? "text-dark-blue" :"text-white"}`} disabled={property?.property_status==="Approved"}><IoCheckmarkSharp className="text-xl font-bold"/></button>
                                 </th>
                                 <th>
-                                    <button className="btn btn-outline btn-md hover:bg-red-600 text-white" disabled={property?.property_status==="Rejected"}><ImCross className="text-white"/></button>
+                                    <button onClick={() => handleReject(property?._id)} className={`btn btn-outline btn-md hover:bg-red-600 ${property?.property_status === "Rejected" ? "text-dark-blue":"text-white"}`} disabled={property?.property_status==="Rejected"}><ImCross /></button>
+                                </th>
+                                <th>
+                                    <button onClick={() => handleDeleteProperty(property?._id)} className="btn btn-outline btn-md hover:bg-red-600 text-white"><MdDeleteForever className="text-white text-xl font-bold"/></button>
                                 </th>
                             </tr>)
                         }
