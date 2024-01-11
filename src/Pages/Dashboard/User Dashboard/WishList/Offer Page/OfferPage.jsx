@@ -32,6 +32,7 @@ const OfferPage = () => {
         property_location,
         agent_name,
         agent_email,
+        price_range,
         offer_price,
         user_email,
         user_name,
