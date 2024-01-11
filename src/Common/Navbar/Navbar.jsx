@@ -110,7 +110,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex items-center gap-3">
-            {userprofile?.role === user ? (
+            {userprofile?.role === "user" ? (
               <Link to="/dashboard/wishlist">
               <button className="btn bg-transparent hover:bg-transparent border-0 rounded-full relative">
                 <MdAddHomeWork className="text-3xl text-white" />

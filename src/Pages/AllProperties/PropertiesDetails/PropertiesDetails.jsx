@@ -38,6 +38,7 @@ const PropertiesDetails = () => {
         price_range,
         user_email: user.email,
         user_name: user.displayName,
+        status:"pending"
       };
       secureServer.post("/AllWishlist", wishlistInfo).then((res) => {
         if (res.data.insertedId) {

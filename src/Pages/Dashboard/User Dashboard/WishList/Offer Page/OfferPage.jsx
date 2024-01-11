@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import useAuth from "../../../../../Hooks/useAuth";
 import useSecureServer from "../../../../../Hooks/useSecureServer";
 import Swal from "sweetalert2";
@@ -19,7 +19,6 @@ const OfferPage = () => {
   const { user } = useAuth();
   const secureServer = useSecureServer();
   const [, refetch] = useWishlist();
-  const navigate = useNavigate();
   const handleMakeOffer = (e) => {
     e.preventDefault();
     const offer_price = e.target.price_offer.value;
@@ -34,10 +33,9 @@ const OfferPage = () => {
         offer_price,
         user_email,
         user_name,
-        status: "pending",
       };
 
-      secureServer.post("/BoughtProperty", propertyInfo).then((res) => {
+      secureServer.post("/offeredItem", propertyInfo).then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
             position: "top-left",
@@ -46,10 +44,22 @@ const OfferPage = () => {
             showConfirmButton: false,
             timer: 1000,
           });
-          secureServer.delete(`/AllWishlist/${_id}`).then((res) => {
+          // secureServer
+          //     .patch(`/AllProperties/${id}`, { property_status: "Approved" })
+          //     .then((res) => {
+          //       refetch();
+          //       if (res.data.acknowledged === true) {
+          //         Swal.fire({
+          //           title: "Congrats!",
+          //           text: "Great Property Approved",
+          //           icon: "success",
+          //         });
+          //       }
+          //     });
+          secureServer.patch(`/AllWishlist/${_id}`,{ status: "Approved" }).then((res) => {
+            console.log(res.data)
             if (res.data.acknowledged === true) {
               refetch();
-              navigate("/dashboard/propertyBought")
             }
           });
         }

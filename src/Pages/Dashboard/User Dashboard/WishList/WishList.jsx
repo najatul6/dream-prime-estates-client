@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const WishList = () => {
     const [wishlist, refetch] = useWishlist();
+    console.log(wishlist)
     const secureServer = useSecureServer();
     const handleDeleteWishlist = id => {
         Swal.fire({
@@ -44,7 +45,7 @@ const WishList = () => {
                             <th>Property image</th>
                             <th>Property title & location</th>
                             <th>Agent Info</th>
-                            <th>State Status</th>
+                            <th>Status</th>
                             <th>Price range</th>
                             <th>Action</th>
                             <th>Action</th>
@@ -85,7 +86,7 @@ const WishList = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    Approved
+                                    {property?.status}
                                 </td>
                                 <td>
                                     {property.price_range}
