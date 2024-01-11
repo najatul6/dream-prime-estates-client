@@ -6,7 +6,7 @@ import { PiShoppingBagOpenFill } from "react-icons/pi";
 import { VscFeedback } from "react-icons/vsc";
 import { BsFillHouseDownFill } from "react-icons/bs";
 import { SiHomeassistantcommunitystore } from "react-icons/si";
-import { MdLandslide } from "react-icons/md";
+import { MdAddHomeWork, MdLandslide } from "react-icons/md";
 import { MdRoundaboutRight } from "react-icons/md";
 import { MdConnectWithoutContact } from "react-icons/md";
 import { MdManageHistory } from "react-icons/md";
@@ -206,9 +206,24 @@ const Dashboard = () => {
             };
           }}
         >
-          <PiShoppingBagOpenFill />
+          <MdAddHomeWork />
           My Wishlist{" "}
           <span className="font-bold text-[#FC0]">( +{wishlist?.length} )</span>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/dashboard/offeredProperties"
+          className="text-xl font-semibold"
+          style={({ isActive }) => {
+            return {
+              backgroundColor: isActive ? "transparent" : "",
+              color: isActive ? "#FC0" : "",
+            };
+          }}
+        >
+          <PiShoppingBagOpenFill />
+          Offered Item
         </NavLink>
       </li>
       <li>

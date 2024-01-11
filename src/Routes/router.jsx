@@ -24,6 +24,7 @@ import ManageUser from "../Pages/Dashboard/Admin Dashboard/Manage Users/ManageUs
 import WishList from "../Pages/Dashboard/User Dashboard/WishList/WishList";
 import OfferPage from "../Pages/Dashboard/User Dashboard/WishList/Offer Page/OfferPage";
 import AddProperties from "../Pages/Dashboard/Agent Dashboard/Add Properties/AddProperties";
+import OfferedProperties from "../Pages/Dashboard/User Dashboard/OfferedProperties/OfferedProperties";
 
 const router = createBrowserRouter([
     {
@@ -88,6 +89,10 @@ const router = createBrowserRouter([
             {
                 path:'wishlist',
                 element: <PrivateRoute><WishList/></PrivateRoute>
+            },
+            {
+                path:'offeredProperties',
+                element: <PrivateRoute><OfferedProperties/></PrivateRoute>
             },
 
             // Agent Section 
