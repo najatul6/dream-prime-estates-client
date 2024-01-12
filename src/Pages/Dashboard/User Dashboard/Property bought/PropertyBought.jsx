@@ -8,7 +8,7 @@ const PropertyBought = () => {
   return (
     <div>
       <h2 className="text-center my-10 text-2xl font-bold text-white">
-        Total Wishlist : {boughtItem?.length}
+        Total Bought : {boughtItem?.length}
       </h2>
       <div className="overflow-x-auto">
         <table className="table text-white">

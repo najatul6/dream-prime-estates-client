@@ -80,7 +80,7 @@ const OfferedProperties = () => {
                 <td>{property.offer_price}</td>
                 <th className="text-center">
                   {property.status === "Approved" ? (
-                    <Link to={`/dashboard/offerPage/${property._id}`}>
+                    <Link to={`/dashboard/payment`}>
                       <button className="btn btn-outline btn-xs">
                         Pay Now
                       </button>
