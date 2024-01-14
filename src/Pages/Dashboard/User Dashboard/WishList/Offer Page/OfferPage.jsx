@@ -60,7 +60,7 @@ const OfferPage = () => {
       Swal.fire({
         position: "top",
         icon: "warning",
-        title: "Try Againg later",
+        title: "Try Again later",
         showConfirmButton: false,
         timer: 1500,
       });

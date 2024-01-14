@@ -96,8 +96,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><OfferedProperties/></PrivateRoute>
             },
             {
-                path:'payment',
-                element: <Payment/>
+                path:'payment/:id',
+                element: <Payment/>,
+                loader:({params})=>fetch(`http://localhost:5000/offeredItem/${params.id}`)
             },
 
             // Agent Section 

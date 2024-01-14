@@ -1,10 +1,18 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useSecureServer from "../../../../Hooks/useSecureServer";
+import PropTypes from "prop-types";
 
-const PaymentForm = () => {
+const PaymentForm = ({ data }) => {
   const [error, setError] = useState();
   const stripe = useStripe();
   const elements = useElements();
+  const secureServer = useSecureServer();
+  const { offer_price } = data;
+
+  useEffect(() => {
+    secureServer.post("/paymentIntent", { offer_price });
+  }, [secureServer]);
 
   const handlepayment = async (event) => {
     event.preventDefault();
@@ -24,7 +32,7 @@ const PaymentForm = () => {
     if (error) {
       setError(error.message);
     } else {
-        console.log(paymentMethod)
+      console.log(paymentMethod);
       setError("");
     }
   };
@@ -57,10 +65,15 @@ const PaymentForm = () => {
         type="submit"
         disabled={!stripe}
       >
-        Pay
+        Pay <span className="text-red-600"> $ {offer_price}</span>
       </button>
     </form>
   );
+};
+
+PaymentForm.propTypes = {
+  data: PropTypes.any,
+  offer_price: PropTypes.any,
 };
 
 export default PaymentForm;

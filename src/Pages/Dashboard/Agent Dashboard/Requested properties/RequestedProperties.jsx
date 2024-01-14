@@ -7,6 +7,7 @@ import useSecureServer from "../../../../Hooks/useSecureServer";
 const RequestedProperties = () => {
     const [requestList,refetch] = useRequestedProperties();
     const secureServer = useSecureServer();
+    console.log(requestList)
     
     const handleApproved=(id)=>{
         Swal.fire({
@@ -98,6 +99,7 @@ const RequestedProperties = () => {
                                 </td>
                                 <td>
                                     {property.status}
+                                    
                                 </td>
                                 <td>
                                     {property.price_range}
@@ -106,10 +108,10 @@ const RequestedProperties = () => {
                                     {property.offer_price}
                                 </td>
                                 <th>
-                                    <button onClick={() => handleApproved(property?._id)} className={`btn btn-outline btn-md hover:bg-green-600 border-white ${property?.property_status === "Approved"? "text-dark-blue" :"text-white"}`} disabled={property?.property_status==="Approved"}><IoCheckmarkSharp className="text-xl font-bold"/></button>
+                                    <button onClick={() => handleApproved(property?._id)} className={`btn btn-outline btn-md hover:bg-green-600 border-white ${property?.property_status === "Approved"? "text-dark-blue" :"text-white"}`} disabled={property?.status==="Approved"}><IoCheckmarkSharp className="text-xl font-bold"/></button>
                                 </th>
                                 <th>
-                                    <button onClick={() => handleReject(property?._id)} className={`btn btn-outline btn-md hover:bg-red-600 ${property?.property_status === "Rejected" ? "text-dark-blue":"text-white"}`} disabled={property?.property_status==="Rejected"}><ImCross /></button>
+                                    <button onClick={() => handleReject(property?._id)} className={`btn btn-outline btn-md hover:bg-red-600 ${property?.status === "Rejected" ? "text-dark-blue":"text-white"}`} disabled={property?.property_status==="Rejected"}><ImCross /></button>
                                 </th>
                             </tr>)
                         }
