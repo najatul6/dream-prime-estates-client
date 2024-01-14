@@ -7,7 +7,6 @@ import useSecureServer from "../../../../Hooks/useSecureServer";
 const RequestedProperties = () => {
     const [requestList,refetch] = useRequestedProperties();
     const secureServer = useSecureServer();
-    console.log(requestList)
     
     const handleApproved=(id)=>{
         Swal.fire({

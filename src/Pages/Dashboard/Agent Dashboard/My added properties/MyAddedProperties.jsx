@@ -1,13 +1,13 @@
-import useAllProperties from "../../../../Hooks/useAllProperties";
 import { FaEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import Swal from "sweetalert2";
 import useSecureServer from "../../../../Hooks/useSecureServer";
 import { Link } from "react-router-dom";
+import useAddedProperties from "../../../../Hooks/useAddedProperties";
 
 const MyAddedProperties = () => {
   const secureServer = useSecureServer();
-  const [allProperties, refetch] = useAllProperties("");
+  const [addedProperties, refetch] = useAddedProperties("");
   const handleDeleteProperty = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -36,7 +36,7 @@ const MyAddedProperties = () => {
   return (
     <div>
       <h2 className="text-center my-10 text-2xl font-bold text-white">
-        Total Properties : {allProperties?.length}
+        Total Properties : {addedProperties?.length}
       </h2>
       <div className="overflow-x-auto">
         <table className="table text-white">
@@ -53,7 +53,7 @@ const MyAddedProperties = () => {
             </tr>
           </thead>
           <tbody>
-            {allProperties?.map((property, index) => (
+            {addedProperties?.map((property, index) => (
               <tr key={property._id}>
                 <th>
                   <label>{index + 1}</label>
