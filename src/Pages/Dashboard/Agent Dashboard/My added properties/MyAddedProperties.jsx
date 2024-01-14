@@ -77,7 +77,7 @@ const MyAddedProperties = () => {
                 <td>{property.property_status}</td>
                 <td>{property.price_range}</td>
                 <th className="text-center">
-                  <Link>
+                  <Link to={`/dashboard/addedProperties/${property._id}`}>
                     <button className="btn bg-transparent hover:bg-green-600 text-white border-green-600 btn-md">
                       <FaEdit />
                       Update

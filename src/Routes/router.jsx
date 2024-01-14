@@ -26,6 +26,7 @@ import OfferPage from "../Pages/Dashboard/User Dashboard/WishList/Offer Page/Off
 import AddProperties from "../Pages/Dashboard/Agent Dashboard/Add Properties/AddProperties";
 import OfferedProperties from "../Pages/Dashboard/User Dashboard/OfferedProperties/OfferedProperties";
 import Payment from "../Pages/Dashboard/User Dashboard/Payment/Payment";
+import UpdateProperties from "../Pages/Dashboard/Agent Dashboard/My added properties/UpadateProperties/UpdateProperties";
 
 const router = createBrowserRouter([
     {
@@ -114,6 +115,11 @@ const router = createBrowserRouter([
             {
                 path:'addedProperties',
                 element:<MyAddedProperties/>
+            },
+            {
+                path:'addedProperties/:id',
+                element:<UpdateProperties/>,
+                loader:({params})=>fetch(`http://localhost:5000/AllProperties/${params.id}`)
             },
             {
                 path:'soldProperties',
