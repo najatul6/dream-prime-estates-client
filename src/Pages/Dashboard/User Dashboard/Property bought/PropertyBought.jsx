@@ -19,9 +19,8 @@ const PropertyBought = () => {
               <th>Property image</th>
               <th>Property title & location</th>
               <th>Agent Info</th>
-              <th>status</th>
               <th>Offered Price</th>
-              <th>Make Payment</th>
+              <th className="text-center">status</th>
             </tr>
           </thead>
           <tbody>
@@ -49,21 +48,10 @@ const PropertyBought = () => {
                 <td>
                   <div className="font-bold">{property.agent_name}</div>
                 </td>
-                <td>{property.status}</td>
                 <td>$ {property.offer_price}</td>
-                <th>
-                  {
-                    property.status=== "pending" || property.status==="rejected"?
-                    <button className="btn btn-outline btn-xs" disabled>
+                <th className="text-center text-green-600">
+                    
                      {property.status}
-                    </button>
-                   :
-                  <Link to={`/dashboard/offerPage/${property._id}`}>
-                  <button className="btn btn-outline btn-xs bg-green-600 text-white hover:bg-green-600 hover:text-[#FC0]">
-                    Pay Now
-                  </button>
-                </Link>
-                  }
                 </th>
               </tr>
             ))}

@@ -2,17 +2,34 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import useSecureServer from "../../../../Hooks/useSecureServer";
 import PropTypes from "prop-types";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const PaymentForm = ({ data }) => {
   const [error, setError] = useState();
+  const [clientSecret, setClientSecret] = useState("");
   const stripe = useStripe();
   const elements = useElements();
   const secureServer = useSecureServer();
-  const { offer_price } = data;
+  const {
+    offer_price,
+    property_image,
+    agent_name,
+    agent_email,
+    property_location,
+    property_title,
+    user_email,
+    user_name,
+    _id,
+  } = data;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
-    secureServer.post("/paymentIntent", { offer_price });
-  }, [secureServer]);
+    secureServer.post("/paymentIntent", { offer_price }).then((res) => {
+      setClientSecret(res.data.clientSecret);
+    });
+  }, [secureServer, offer_price]);
 
   const handlepayment = async (event) => {
     event.preventDefault();
@@ -32,8 +49,52 @@ const PaymentForm = ({ data }) => {
     if (error) {
       setError(error.message);
     } else {
-      console.log(paymentMethod);
       setError("");
+    }
+
+    // Payment Confirm
+    const { paymentIntent, error: ErrorMsg } = await stripe.confirmCardPayment(
+      clientSecret,
+      {
+        payment_method: {
+          card: card,
+          billing_details: {
+            name: user_name || "anonymous",
+            email: user_email || "anonymous",
+          },
+        },
+      }
+    );
+    if (ErrorMsg) {
+      setError("confirm Error");
+    } else {
+      if (paymentIntent.status === "succeeded") {
+        Swal.fire({
+          position: "top",
+          icon: "success",
+          title: `Your Transaction Id <br/> ${paymentIntent.id}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        const paidProperties = {
+          offer_price,
+          property_image,
+          agent_name,
+          agent_email,
+          property_location,
+          property_title,
+          user_email,
+          user_name,
+          id: _id,
+          status: "paid",
+          transaction_Id: paymentIntent.id,
+          date: new Date(),
+        };
+        const res = await secureServer.post("/BoughtProperty", paidProperties);
+        if (res.data.acknowledged === "true") {
+          navigate('/dashboard/propertyBought')
+        }
+      }
     }
   };
   return (
