@@ -20,7 +20,7 @@ const ManageReviews = () => {
                   No. : {index + 1}
                 </h2>
                 <p className="font-bold text-white">
-                  <span className="font-bold text-dark-yellow uppercase">UserName : </span>
+                  <span className="font-bold text-dark-yellow uppercase">Name : </span>
                   {review?.reviewer_name}
                 </p>
                 <p className="font-bold text-white">

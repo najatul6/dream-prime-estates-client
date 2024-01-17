@@ -1,10 +1,7 @@
-import { Link } from "react-router-dom";
 import useBoughtItem from "../../../../Hooks/useBoughtItem";
-// import useSecureServer from "../../../../Hooks/useSecureServer";
 
 const PropertyBought = () => {
   const [boughtItem] = useBoughtItem();
-  // const secureSever = useSecureServer();
   return (
     <div>
       <h2 className="text-center my-10 text-2xl font-bold text-white">

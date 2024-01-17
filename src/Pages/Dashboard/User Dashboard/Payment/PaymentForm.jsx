@@ -49,6 +49,7 @@ const PaymentForm = ({ data }) => {
     if (error) {
       setError(error.message);
     } else {
+      console.log("paymentMethod:", paymentMethod);
       setError("");
     }
 
@@ -59,8 +60,8 @@ const PaymentForm = ({ data }) => {
         payment_method: {
           card: card,
           billing_details: {
-            name: user_name || "anonymous",
-            email: user_email || "anonymous",
+            name: data?.user_name || "anonymous",
+            email: data?.user_email || "anonymous",
           },
         },
       }
@@ -69,6 +70,7 @@ const PaymentForm = ({ data }) => {
       setError("confirm Error");
     } else {
       if (paymentIntent.status === "succeeded") {
+        console.log(paymentIntent);
         Swal.fire({
           position: "top",
           icon: "success",
@@ -91,8 +93,12 @@ const PaymentForm = ({ data }) => {
           date: new Date(),
         };
         const res = await secureServer.post("/BoughtProperty", paidProperties);
-        if (res.data.acknowledged === "true") {
-          navigate('/dashboard/propertyBought')
+        if (res.data.acknowledged) {
+          secureServer.delete(`/offeredItem/${_id}`).then((res) => {
+            if (res.data.acknowledged) {
+              navigate("/dashboard/propertyBought");
+            }
+          });
         }
       }
     }

@@ -5,6 +5,7 @@ import useAuth from "../../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import useSecureServer from "../../../Hooks/useSecureServer";
 import useWishlist from "../../../Hooks/useWishlist";
+import UseUserProfile from "../../../Hooks/UseUserProfile";
 
 const PropertiesDetails = () => {
   const properties = useLoaderData();
@@ -20,10 +21,11 @@ const PropertiesDetails = () => {
     property_verification_status,
     price_range,
     agent_position,
-    property_status
+    property_status,
   } = properties;
   const { user } = useAuth();
   const secureServer = useSecureServer();
+  const [userprofile] = UseUserProfile();
   const [, refetch] = useWishlist();
   const handleaddwishlist = () => {
     if (user && user.email) {
@@ -38,7 +40,7 @@ const PropertiesDetails = () => {
         price_range,
         user_email: user.email,
         user_name: user.displayName,
-        status:"pending"
+        status: "pending",
       };
       secureServer.post("/AllWishlist", wishlistInfo).then((res) => {
         if (res.data.insertedId) {
@@ -90,10 +92,7 @@ const PropertiesDetails = () => {
             {description}
           </p>
           <p className="text-2xl">
-            <span className="text-xl font-bold text-[#FC0]">
-              {" "}
-              Status :
-            </span>{" "}
+            <span className="text-xl font-bold text-[#FC0]"> Status :</span>{" "}
             {property_status}
           </p>
         </div>
@@ -121,13 +120,19 @@ const PropertiesDetails = () => {
               <p className="text-sm">{agent_position}</p>
             </div>
           </div>
-          <button
-            onClick={handleaddwishlist}
-            disabled={property_status==="Rejected"}
-            className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white"
-          >
-            Add to Wishlist
-          </button>
+          {userprofile?.role === "user" ? (
+            <button
+              onClick={handleaddwishlist}
+              disabled={property_status === "Rejected"}
+              className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white"
+            >
+              Add to Wishlist
+            </button>
+          ) : (
+            <button disabled className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white">
+              Add to Wishlist
+            </button>
+          )}
         </div>
         <hr />
         <div className="my-5">

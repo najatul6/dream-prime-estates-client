@@ -154,7 +154,8 @@ const ManageUser = () => {
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.role}</td>
-                <td className="flex flex-col gap-y-2 justify-center items-center">
+                <th>
+                  <div className="flex flex-col gap-y-2 justify-center items-center">
                   <button
                     onClick={() => handleMakeAgent(user)}
                     className={`btn btn-outline btn-xs`}
@@ -170,8 +171,10 @@ const ManageUser = () => {
                   >
                     Make Admin
                   </button>
-                </td>
+                  </div>
+                </th>
                 <th>
+                  <div className="flex flex-col gap-y-2 justify-center items-center">
                   <button
                     onClick={() => handleMakeUser(user)}
                     className="btn btn-outline btn-xs"
@@ -185,6 +188,8 @@ const ManageUser = () => {
                   >
                     Delete
                   </button>
+                  </div>
+                  
                 </th>
               </tr>
             ))}
