@@ -4,9 +4,9 @@ import Swal from "sweetalert2";
 import useSecureServer from "../../../../Hooks/useSecureServer";
 
 const OfferedProperties = () => {
-  const [offerList,refetch] = useOfferList();
+  const [offerList, refetch] = useOfferList();
   const secureServer = useSecureServer();
-  const handleDelete=(id)=>{
+  const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
       text: "Do you want to Delete?",
@@ -17,21 +17,19 @@ const OfferedProperties = () => {
       confirmButtonText: "Yes!",
     }).then((result) => {
       if (result.isConfirmed) {
-        secureServer
-          .delete(`/offeredItem/${id}`)
-          .then((res) => {
-            refetch();
-            if (res.data.acknowledged === true) {
-              Swal.fire({
-                title: "Congrats!",
-                text: "Great Property Approved",
-                icon: "success",
-              });
-            }
-          });
+        secureServer.delete(`/offeredItem/${id}`).then((res) => {
+          refetch();
+          if (res.data.acknowledged === true) {
+            Swal.fire({
+              title: "Congrats!",
+              text: "Great Property Approved",
+              icon: "success",
+            });
+          }
+        });
       }
     });
-  }
+  };
   return (
     <div>
       <h2 className="text-center my-10 text-2xl font-bold text-white">
@@ -86,7 +84,12 @@ const OfferedProperties = () => {
                       </button>
                     </Link>
                   ) : property.status === "Rejected" ? (
-                    <button onClick={() => handleDelete(property?._id)} className="btn btn-outline btn-xs">Delete</button>
+                    <button
+                      onClick={() => handleDelete(property?._id)}
+                      className="btn btn-outline btn-xs"
+                    >
+                      Delete
+                    </button>
                   ) : (
                     <button className="btn btn-outline btn-xs" disabled>
                       Pay Now

@@ -153,7 +153,7 @@ const OfferPage = () => {
             </label>
             <input
               type="number"
-              min={price_range.split("-")[0]}
+              min={parseInt(price_range.split("-")[0].replace('$', '').trim())}
               name="price_offer"
               placeholder="Type your Offer Price"
               className="input input-bordered text-white bg-transparent"
