@@ -21,7 +21,7 @@ const PropertiesCard = ({ proparties }) => {
   return (
     <div className="card card-compact bg-[#00113B] text-white shadow-2xl shadow-[#4c40f767]">
       <figure>
-        <img src={property_image} alt={property_title} />
+        <img className="w-full h-[300px]" src={property_image} alt={property_title} />
       </figure>
       <div className="card-body shadow-inner shadow-[#4c40f7] rounded-b-xl">
         <p className="text-[#4ADB61] font-bold text-lg">{price_range}</p>

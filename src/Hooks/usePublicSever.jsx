@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const publicServer = axios.create({
-    baseURL:'http://localhost:5000'
+    baseURL:'https://dream-prime-estates-server.vercel.app'
 })
 
 const UsePublicServer = () => {

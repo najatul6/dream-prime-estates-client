@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
@@ -7,6 +6,7 @@ import { Rating, Star } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css';
 import testimonialBG from '../../../assets/Cover/testimonial cover.jpg'
 import { Parallax } from "react-parallax";
+import useTestimonial from "../../../Hooks/useTestimonial";
 
 const myStyles = {
     itemShapes: Star,
@@ -15,13 +15,8 @@ const myStyles = {
 }
 
 const Testimonial = () => {
-    const [testimonial, setTestimonial] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/AllReviews')
-            .then(res => res.json())
-            .then(data => setTestimonial(data))
-    }, [])
-
+    const [testimonial]= useTestimonial()
+console.log(testimonial)
     return (
         <div className="my-20">
             <div className="my-5">
@@ -45,11 +40,11 @@ const Testimonial = () => {
                             loop={true}
                             slidesPerView={1}
                             spaceBetween={10}
-                            modules={[Autoplay,]}
+                            modules={[Autoplay]}
                             className="mySwiper"
                         >
                             {
-                                testimonial?.map(review => <SwiperSlide key={review?.reviewer_name}>
+                                testimonial?.map(review => <SwiperSlide key={review?._id}>
                                     <div className="md:m-24 p-5 flex flex-col justify-center items-center space-y-8 text-white text-center">
                                         <div className="avatar">
                                             <div className="w-24 rounded-full ring ring-[#FC0] ring-offset-base-100 ring-offset-2">

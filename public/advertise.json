@@ -1,74 +1,200 @@
 [
   {
-    "image": "https://i.ibb.co/YNWR1kc/Family-Home-with-Coastal-Transitional-Interiors.jpg",
-    "title": "Cozy Urban Apartment",
-    "location": "456 Main Street, Cityville",
-    "agent": {
-      "name": "Alice Johnson",
-      "image": "https://i.ibb.co/sJX0cF4/images-1.jpg"
-    },
+    "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
+    "property_title": "Modern Urban Loft",
+    "property_location": "789 City Center, Metropolis",
+    "property_status":"Approved",
+    "agent_name": "Sophia Anderson",
+    "agent_email":"najatulislam37@gmail.com",
+    "agent_position": "Realtor",
+    "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
     "verification_status": "Verified",
-    "price_range": "$300,000 - $350,000",
-    "details": "This cozy urban apartment offers a modern design and is conveniently located in the heart of Cityville. Enjoy the balcony with a stunning city view and the convenience of being close to public transport. Ideal for those who appreciate urban living."
+    "price_range": "$800 - $900",
+    "description": "Experience city living at its finest! This modern loft in the heart of Metropolis offers a sleek design and convenient access to downtown amenities. Verified and ready for a new owner seeking urban elegance.",
+    "reviews": [
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Alice Johnson",
+    "useremail": "alice@example.com",
+    "comment": "Amazing properties and excellent service!"
   },
   {
-    "image": "https://i.ibb.co/nm49DdD/Untitled.jpg",
-    "title": "Spacious Suburban House",
-    "location": "789 Green Meadows, Suburbia",
-    "agent": {
-      "name": "Bob Smith",
-      "image": "https://i.ibb.co/HB1d1dD/images.jpg"
-    },
-    "verification_status": "Verified",
-    "price_range": "$500,000 - $600,000",
-    "details": "This spacious suburban house offers four bedrooms, a modern kitchen, and a large backyard. Located in a quiet neighborhood, it provides a peaceful retreat while still being close to amenities. Perfect for families looking for a comfortable home."
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Bob Williams",
+    "useremail": "bob@example.com",
+    "comment": "Great location and top-notch amenities."
   },
   {
-    "image": "https://i.ibb.co/TTLK7Gn/137-N-Westgate-Ave-Los-Angeles-CA-90049-realtor-com.jpg",
-    "title": "Rustic Countryside Cottage",
-    "location": "101 Meadow Lane, Countryside",
-    "agent": {
-      "name": "Emma Davis",
-      "image": "https://i.ibb.co/m0NzydG/download.jpg"
-    },
-    "verification_status": "Not Verified",
-    "price_range": "$250,000 - $300,000",
-    "details": "Experience the charm of this rustic countryside cottage with three bedrooms, a cozy fireplace, and wooden beams. Although not verified, this property offers a peaceful retreat surrounded by nature. Ideal for those seeking a quiet and rustic lifestyle."
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Charlie Davis",
+    "useremail": "charlie@example.com",
+    "comment": "Smooth process from inquiry to purchase."
+  }
+]
   },
   {
-    "image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
-    "title": "Modern Downtown Loft",
-    "location": "222 High Street, Metropolis",
-    "agent": {
-      "name": "Daniel White",
-      "image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg"
-    },
+    "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
+    "property_title": "Suburban Family Home",
+    "property_location": "456 Green Meadows, Suburbia",
+    "property_status":"Approved",
+    "agent_name": "Michael Turner",
+    "agent_email":"najatulislam37@gmail.com",
+    "agent_position": "Realtor",
+    "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
     "verification_status": "Verified",
-    "price_range": "$700,000 - $800,000",
-    "details": "Live in style in this modern downtown loft with an open concept, high ceilings, and close proximity to entertainment. Verified and ready for urban enthusiasts, this property is perfect for those who appreciate contemporary city living."
+    "price_range": "$200 - $350",
+    "description": "A perfect family home in a quiet suburban neighborhood. Verified by our team, this property offers spacious living areas and a backyard for family gatherings and relaxation.",
+    "reviews": [
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Alice Johnson",
+    "useremail": "alice@example.com",
+    "comment": "Amazing properties and excellent service!"
   },
   {
-    "image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
-    "title": "Modern Downtown Loft",
-    "location": "222 High Street, Metropolis",
-    "agent": {
-      "name": "Daniel White",
-      "image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg"
-    },
-    "verification_status": "Verified",
-    "price_range": "$700,000 - $800,000",
-    "details": "Live in style in this modern downtown loft with an open concept, high ceilings, and close proximity to entertainment. Verified and ready for urban enthusiasts, this property is perfect for those who appreciate contemporary city living."
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Bob Williams",
+    "useremail": "bob@example.com",
+    "comment": "Great location and top-notch amenities."
   },
   {
-    "image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
-    "title": "Modern Downtown Loft",
-    "location": "222 High Street, Metropolis",
-    "agent": {
-      "name": "Daniel White",
-      "image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg"
-    },
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Charlie Davis",
+    "useremail": "charlie@example.com",
+    "comment": "Smooth process from inquiry to purchase."
+  }
+]
+  },
+  {
+    "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
+    "property_title": "Countryside Cottage Oasis",
+    "property_location": "101 Meadow Lane, Countryside",
+    "property_status":"Approved",
+    "agent_name": "Emma Davis",
+    "agent_email":"najatulislam37@gmail.com",
+    "agent_position": "Realtor",
+    "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
     "verification_status": "Verified",
-    "price_range": "$700,000 - $800,000",
-    "details": "Live in style in this modern downtown loft with an open concept, high ceilings, and close proximity to entertainment. Verified and ready for urban enthusiasts, this property is perfect for those who appreciate contemporary city living."
+    "price_range": "$210 - $340",
+    "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+    "reviews": [
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Alice Johnson",
+    "useremail": "alice@example.com",
+    "comment": "Amazing properties and excellent service!"
+  },
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Bob Williams",
+    "useremail": "bob@example.com",
+    "comment": "Great location and top-notch amenities."
+  },
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Charlie Davis",
+    "useremail": "charlie@example.com",
+    "comment": "Smooth process from inquiry to purchase."
+  }
+]
+  },
+  {
+    "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
+    "property_title": "Countryside Cottage Oasis",
+    "property_location": "101 Meadow Lane, Countryside",
+    "property_status":"Approved",
+    "agent_name": "Emma Davis",
+    "agent_email":"najatulislam37@gmail.com",
+    "agent_position": "Realtor",
+    "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
+    "verification_status": "Verified",
+    "price_range": "$200 - $350",
+    "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+    "reviews": [
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Alice Johnson",
+    "useremail": "alice@example.com",
+    "comment": "Amazing properties and excellent service!"
+  },
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Bob Williams",
+    "useremail": "bob@example.com",
+    "comment": "Great location and top-notch amenities."
+  },
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Charlie Davis",
+    "useremail": "charlie@example.com",
+    "comment": "Smooth process from inquiry to purchase."
+  }
+]
+  },
+  {
+    "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
+    "property_title": "Countryside Cottage Oasis",
+    "property_location": "101 Meadow Lane, Countryside",
+    "property_status":"Approved",
+    "agent_name": "Emma Davis",
+    "agent_email":"najatulislam37@gmail.com",
+    "agent_position": "Realtor",
+    "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
+    "verification_status": "Verified",
+    "price_range": "$340 - $450",
+    "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+    "reviews": [
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Alice Johnson",
+    "useremail": "alice@example.com",
+    "comment": "Amazing properties and excellent service!"
+  },
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Bob Williams",
+    "useremail": "bob@example.com",
+    "comment": "Great location and top-notch amenities."
+  },
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Charlie Davis",
+    "useremail": "charlie@example.com",
+    "comment": "Smooth process from inquiry to purchase."
+  }
+]
+  },
+  {
+    "property_image": "https://i.ibb.co/54W4bXv/2033-Lewisburg-Park-Franklin-TN-37064-Zillow.jpg",
+    "property_title": "Countryside Cottage Oasis",
+    "property_location": "101 Meadow Lane, Countryside",
+    "property_status":"Approved",
+    "agent_name": "Emma Davis",
+    "agent_email":"najatulislam37@gmail.com",
+    "agent_position": "Realtor",
+    "agent_image": "https://i.ibb.co/SPHRsST/istockphoto-1336324740-612x612.jpg",
+    "verification_status": "Verified",
+    "price_range": "$500 - $700",
+    "description": "Discover the charm of countryside living in this cozy cottage. Verified and surrounded by nature, this property offers a peaceful escape with a touch of rustic elegance.",
+    "reviews": [
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Alice Johnson",
+    "useremail": "alice@example.com",
+    "comment": "Amazing properties and excellent service!"
+  },
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Bob Williams",
+    "useremail": "bob@example.com",
+    "comment": "Great location and top-notch amenities."
+  },
+  {
+    "userImage":"https://i.ibb.co/cyKGL8z/najatul6-git-profile.png",
+    "username": "Charlie Davis",
+    "useremail": "charlie@example.com",
+    "comment": "Smooth process from inquiry to purchase."
+  }
+]
   }
 ]

@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import SectionHeader from "../../../Components/SectionHeader/SectionHeader";
+import useAdvertisement from "../../../Hooks/useAdvertisement";
 
 const Advertisement = () => {
-    const [advertisement, setAdvertisement] = useState();
-    useEffect(() => {
-        fetch('http://localhost:5000/Advertisement')
-            .then(res => res.json())
-            .then(data => setAdvertisement(data))
-    }, [])
+    const [advertisement]= useAdvertisement();
+    console.log(advertisement)
+    
     return (
         <div className="my-20">
             <div className="my-5">
@@ -32,8 +29,8 @@ const Advertisement = () => {
                     className="mySwiper"
                 >
                     {
-                        advertisement?.map(item => <SwiperSlide key={item._id}>
-                            <img className="w-full h-[300px]" src={item.image} alt="" />
+                        advertisement?.map(item => <SwiperSlide key={item?._id}>
+                            <img className="w-full h-[300px]" src={item?.property_image} alt="" />
                         </SwiperSlide>)
                     }
 

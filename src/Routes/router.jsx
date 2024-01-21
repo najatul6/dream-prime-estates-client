@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             {
                 path:'allProperties/:id',
                 element:<PrivateRoute><PropertiesDetails/></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/AllProperties/${params.id}`)
+                loader:({params})=>fetch(`https://dream-prime-estates-server.vercel.app/AllProperties/${params.id}`)
             },
             {
                 path:'about',
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
             {
                 path:'offerPage/:id',
                 element:<OfferPage/>,
-                loader:({params})=>fetch(`http://localhost:5000/AllWishlist/${params.id}`)
+                loader:({params})=>fetch(`https://dream-prime-estates-server.vercel.app/AllWishlist/${params.id}`)
             },
             {
                 path:'wishlist',
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
             {
                 path:'payment/:id',
                 element: <Payment/>,
-                loader:({params})=>fetch(`http://localhost:5000/offeredItem/${params.id}`)
+                loader:({params})=>fetch(`https://dream-prime-estates-server.vercel.app/offeredItem/${params.id}`)
             },
 
             // Agent Section 
@@ -119,7 +119,7 @@ const router = createBrowserRouter([
             {
                 path:'addedProperties/:id',
                 element:<UpdateProperties/>,
-                loader:({params})=>fetch(`http://localhost:5000/AllProperties/${params.id}`)
+                loader:({params})=>fetch(`https://dream-prime-estates-server.vercel.app/AllProperties/${params.id}`)
             },
             {
                 path:'soldProperties',
