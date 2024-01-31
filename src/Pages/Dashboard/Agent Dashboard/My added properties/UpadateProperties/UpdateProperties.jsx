@@ -34,7 +34,6 @@ const UpdateProperties = () => {
           });
           navigate(`/dashboard/addedProperties`);
         }
-        console.log(res.data);
       });
   };
 

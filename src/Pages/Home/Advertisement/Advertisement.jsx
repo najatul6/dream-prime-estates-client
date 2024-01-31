@@ -6,7 +6,6 @@ import useAdvertisement from "../../../Hooks/useAdvertisement";
 
 const Advertisement = () => {
     const [advertisement]= useAdvertisement();
-    console.log(advertisement)
     
     return (
         <div className="my-20">

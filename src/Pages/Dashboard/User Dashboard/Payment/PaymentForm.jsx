@@ -49,7 +49,6 @@ const PaymentForm = ({ data }) => {
     if (error) {
       setError(error.message);
     } else {
-      console.log("paymentMethod:", paymentMethod);
       setError("");
     }
 
@@ -70,7 +69,6 @@ const PaymentForm = ({ data }) => {
       setError("confirm Error");
     } else {
       if (paymentIntent.status === "succeeded") {
-        console.log(paymentIntent);
         Swal.fire({
           position: "top",
           icon: "success",

@@ -16,7 +16,6 @@ const myStyles = {
 
 const Testimonial = () => {
     const [testimonial]= useTestimonial()
-console.log(testimonial)
     return (
         <div className="my-20">
             <div className="my-5">

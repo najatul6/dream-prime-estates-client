@@ -39,7 +39,7 @@ const AllProperties = () => {
               name="search"
               className="bg-transparent outline-none w-full text-[#4c40f767] font-bold"
               type="text"
-              placeholder="Property Name or Location..."
+              placeholder="Search Property Location..."
             />
           </div>
           <button
@@ -51,19 +51,19 @@ const AllProperties = () => {
         </div>
       </form>
       <h1 className="text-xl font-bold text-[#FC0] mt-5 ml-5">{allProperties?.length} data found</h1>
-      {allProperties?.length === 0 ? (
+      {allProperties?.length > 0 ? (
         <div className="flex justify-center items-center py-10">
           <p className="text-2xl font-bold text-white text-center">
             <FaSadCry className="mx-auto"/>
-            No Data Found
+            No Data Found ...
           </p>{" "}
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20">
-          {allProperties?.map((proparties) => (
+          {allProperties?.map((properties) => (
             <PropertiesCard
-              key={proparties._id}
-              proparties={proparties}
+              key={properties._id}
+              properties={properties}
             ></PropertiesCard>
           ))}
         </div>

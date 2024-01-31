@@ -2,20 +2,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
-import img1 from '../../../assets/Banner/1.jpeg'
-import img2 from '../../../assets/Banner/2.jpeg'
-import img3 from '../../../assets/Banner/3.jpeg'
-import img4 from '../../../assets/Banner/4.jpeg'
-import img5 from '../../../assets/Banner/5.jpeg'
-import img6 from '../../../assets/Banner/6.jpeg'
-import img7 from '../../../assets/Banner/7.jpeg'
-import img8 from '../../../assets/Banner/8.jpeg'
-import img9 from '../../../assets/Banner/9.jpeg'
-import img10 from '../../../assets/Banner/10.jpeg'
-import img11 from '../../../assets/Banner/11.jpeg'
-import img12 from '../../../assets/Banner/12.jpeg'
-import img13 from '../../../assets/Banner/13.jpeg'
-import img14 from '../../../assets/Banner/15.jpeg'
 
 const Banner = () => {
     return (
@@ -32,47 +18,24 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img1} alt="" />
+                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src="https://i.ibb.co/h9kPrX7/213734019-home-for-sale-real-estate-sign-and-beautiful-new-house.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img2} alt="" />
+                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src="https://i.ibb.co/s6358St/72513589-home-for-sale-sign-in-front-of-new-home.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img3} alt="" />
+                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src="https://i.ibb.co/GxNTrML/images.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img4} alt="" />
+                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src="https://i.ibb.co/BPSqDRG/360-F-35364059-stt-HHZOkx3d-OSc5-Ns8k-WOd-Sn-ZX53-DKKv.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img5} alt="" />
+                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src="https://i.ibb.co/Fbk62xQ/depositphotos-11884590-stock-photo-house-for-sale.webp" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img6} alt="" />
+                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src="https://i.ibb.co/wWKRjPc/4d4aae238ac9e98f1d7f42c3098472cd.jpg" alt="" />
                 </SwiperSlide>
-                <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img7} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img8} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img9} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img10} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img11} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img12} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img13} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className='w-full object-cover h-[100vh] md:h-[400px] lg:h-[600px]' src={img14} alt="" />
-                </SwiperSlide>
+                
             </Swiper>
         </div>
     );
