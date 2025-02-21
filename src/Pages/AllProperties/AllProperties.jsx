@@ -51,7 +51,7 @@ const AllProperties = () => {
         </div>
       </form>
       <h1 className="text-xl font-bold text-[#FC0] mt-5 ml-5">{allProperties?.length} data found</h1>
-      {allProperties?.length > 0 ? (
+      {allProperties?.length === 0 ? (
         <div className="flex justify-center items-center py-10">
           <p className="text-2xl font-bold text-white text-center">
             <FaSadCry className="mx-auto"/>

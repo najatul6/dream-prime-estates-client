@@ -89,7 +89,7 @@ const WishList = () => {
                 <th>
                     <Link to={`/dashboard/offerPage/${property._id}`}>
                       <button
-                        className="btn btn-outline btn-xs"
+                        className="btn border-white btn-outline btn-xs"
                       >
                         Make an Offer
                       </button>
@@ -98,7 +98,7 @@ const WishList = () => {
                 <th>
                   <button
                     onClick={() => handleDeleteWishlist(property._id)}
-                    className="btn btn-outline btn-xs"
+                    className="btn border-white btn-outline btn-xs"
                   >
                     Delete
                   </button>

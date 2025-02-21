@@ -133,7 +133,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu dropdown-content bg-base-100 rounded-box min-w-max"
+                className="mt-3 z-[1] p-2 shadow menu dropdown-content bg-gray-800 rounded-box min-w-max"
               >
                 <li>
                   <a className="justify-between font-bold text-[#FC0]">

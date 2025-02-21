@@ -129,7 +129,7 @@ const PropertiesDetails = () => {
               Add to Wishlist
             </button>
           ) : (
-            <button disabled className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white">
+            <button className="btn btn-outline btn-md font-bold text-xl text-[#FC0] border-2 border-[#FC0] hover:bg-[#FC0] hover:text-white">
               Add to Wishlist
             </button>
           )}
